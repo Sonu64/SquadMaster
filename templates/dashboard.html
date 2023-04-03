@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body>
+    
+        <p>Football Dashboard</p>
+    
+    <h1>Welcome {{current_user.name}}, Hope your {{current_user.sport}} team is doing well !</h1>
+
+    <h4> ADD A PLAYER FROM BELOW </h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form action = "/dashboard" method = "POST">
+        <tr>
+            <td>
+                <label for="player" style="margin-right: 20px;">Add Player</label>
+            </td>
+            <td>
+                <input type="text" name="name"   placeholder="Player here" autocomplete="off" required>              
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="desc" style="margin-right: 20px;" >Roll Number</label>
+            </td>
+            <td>
+                <input type="text" id="desc" name="roll" placeholder="Roll number here" autocomplete="off" required>              
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button type="submit"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;&nbsp;ADD PLAYER to your {{current_user.sport}} Team</button>
+            </td>
+
+        </tr>
+    </form>
+
+
+
+
+
+
+
+<br><br><br>
+<form action="/allPlayers{{current_user.sport}}">
+    <input type="submit" value="View All Players"/>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4><a href="{{url_for('logout')}}">LOGOUT</a></h4>
+</body>
+</html>
