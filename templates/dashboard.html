@@ -4,90 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <title>Document</title>
+    <style>
+        .header
+        {
+          border: 2px solid red;
+          background-color: white;
+        }
+        .btn
+        {
+           float: right;
+           margin-top: 9px;
+           margin-right: 10px;
+           background-color: red;
+           border-radius: 10px;
+           padding: 5px;
+           color: white;
+           border: 1px solid white;
+           text-decoration: none;
+           box-shadow: none;
+
+        }
+        .btn:hover
+        {
+            background-color: rgb(160, 0, 0);
+        }
+        .whole
+        {
+            border: 2px solid blue;
+            padding: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: white;
+            height: auto;
+            overflow: auto;
+            margin-top: 20px;
+        }
+        .card1
+        {
+            width :48%;
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            height: auto;
+            overflow: auto;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .card2
+        {
+            width: 48%;
+            box-sizing: border-box;
+            display: inline-block;
+            float: right;
+            text-align: center;
+            border: 1px solid black;
+            height: auto;
+            overflow: auto;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .box
+        {
+            margin: 15px;
+            
+        }
+        .btn1
+        {
+            
+            
+        }
+        h1{
+            margin-left: 15px;
+        }
+    </style>
 </head>
-<body>
+<body background="https://i.ibb.co/SJfDCNY/bg3.jpg">
     
-        <p>Football Dashboard</p>
+        <div class="header">
+            <h1>
+                FOOTBALL DASHBOARD<button class="btn" id="logout">LOGOUT</button>
+            </h1>
+        </div>
+    <div class="whole">    
+            <h4>Hello coordinator</h4>
+    </div>        
+            <div class="card1">
+                <h3>add players to your team</h3>
+                <input type="text" placeholder="Enter name" class="box"><br>
+                <input type="text" placeholder="Roll number" class="box"><br>
+                <input type="button" value="Submit" class="btn1" id="Submit"> 
+            </div>
+            <div class="card2">
+                <h3>View your current team</h3>
+                <ul>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    <li>PLAYER2</li>
+                    <li>PLAYER1</li>
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
     
-    <h1>Welcome {{current_user.name}}, Hope your {{current_user.sport}} team is doing well !</h1>
-
-    <h4> ADD A PLAYER FROM BELOW </h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <form action = "/dashboard" method = "POST">
-        <tr>
-            <td>
-                <label for="player" style="margin-right: 20px;">Add Player</label>
-            </td>
-            <td>
-                <input type="text" name="name"   placeholder="Player here" autocomplete="off" required>              
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="desc" style="margin-right: 20px;" >Roll Number</label>
-            </td>
-            <td>
-                <input type="text" id="desc" name="roll" placeholder="Roll number here" autocomplete="off" required>              
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <button type="submit"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;&nbsp;ADD PLAYER to your {{current_user.sport}} Team</button>
-            </td>
-
-        </tr>
-    </form>
-
-
-
-
-
-
-
-<br><br><br>
-<form action="/allPlayers{{current_user.sport}}">
-    <input type="submit" value="View All Players"/>
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h4><a href="{{url_for('logout')}}">LOGOUT</a></h4>
 </body>
 </html>
