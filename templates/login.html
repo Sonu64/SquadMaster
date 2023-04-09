@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    
+<script type="text/javascript">
+        function disableBack() { window.history.forward(); }
+        setTimeout("disableBack()", 0);
+        window.onunload = function () { null };
+</script>
+  <meta charset="UTF-8">
+  <title>Coordinator Login </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+  background-image: url("https://i.ibb.co/SJfDCNY/bg3.jpg");
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  min-height: 90vh;
+  
+}
+.text{
+    text-align: center;
+}
+.text::placeholder
+{
+    text-align: center;
+}
+.text:focus::placeholder
+{
+    opacity: 0;
+}
+.password:focus::placeholder
+{
+    opacity: 0;
+}
+.password::placeholder
+{
+    text-align: center;
+}
+.password
+{
+    text-align: center;
+}
+.login {
+  width:30%;
+  color: white;
+  background:#136a8a;
+  background: 
+    -webkit-linear-gradient(to right, #15544f, #125871);
+  background: 
+    linear-gradient(to right, #0f5751, #135871);
+  margin: auto;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+   
+  border-radius: 8px;
+  padding: 50px;
+  text-align: center;
+  display: block;
+}
+.login .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .head .company {
+  font-size: 2.2em;
+}
+
+
+.login .form input[type=text].text {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+.login .form .text::placeholder {
+  color: #D3D3D3;
+}
+.text::placeholder{
+    text-align: center;
+}
+.login .form input[type=password].password {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.login .form .password::placeholder {
+  color: #D3D3D3;
+}
+.login .form .btn-login {
+  background: none;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px 0px 0px 2px white;
+  border-radius: 3px;
+  padding: 5px 2em;
+  transition: 0.5s;
+  
+}
+.login .form .btn-login:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+.company
+{
+    margin: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    color: black;
+    padding: 10px 20px;
+}
+.submitButton:hover{
+    background-color: white;
+    color: black;
+}
+.form a{
+    font-weight: bold;
+    text-decoration: none;
+    color: orange;
+}
+.form a:hover{
+    color: greenyellow;
+}
+input{
+    font-family: "Poppins", sans-serif;
+}
+
+  </style>
+</head>
+<body>
+<section class='login' id='login'>
+  <div class='head'>
+        <h1 class='company' style="font-family: 'Poppins', sans-serif;">Coordinator Login</h1><br><br>
+  </div>
+  <p style="color:red;font-weight: bold;font-size: larger;">
+    {{error}}
+  </p>
+
+
+      <div class='form'>
+        <form method="post" action=""#>
+            {{ form.hidden_tag() }}
+            {{ form.username(autocomplete="off") }}<br><br>
+            {{ form.password(autocomplete="off") }}<br><br>
+            {{ form.submit (style="padding:12px 30px;font-weight:bold;border:2px solid white;background-color:transparent;color:white;cursor:pointer;transition:0.3s ease;")}}
+        </form><br>
+        <p>Don't have an account ? <a href="/reg">Register</a></p><br>
+        <p><a href="/" style="font-size: 20px;">Back Home</a></p>
+      </div>
+</section>
+
+
+</body>
+</html>
+
+
+
+
+

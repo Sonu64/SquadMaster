@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        body{
+            font-family: "Poppins", sans-serif;
+            background-image: 
+    /* top, transparent red */
+    linear-gradient(
+        rgba(44, 42, 42, 0.4), 
+      rgba(44, 42, 42, 0.4)
+    ),
+    /* your image */
+    url("https://i.ibb.co/SJfDCNY/bg3.jpg");
+        }
+        h2{
+            background-color: rgb(255, 208, 0);
+            padding: 30px 0px;
+            font-size: 50px;
+        }
+        .card2{
+            
+            width: 60%;
+        }
+        ol{
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        td{
+            padding: 5px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgb(128, 228, 251);
+        }
+        h2{
+            width: 60%;
+            font-size: 30px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Badminton Players
+    </title>
+</head>
+<body>
+
+    <center>
+        <table class="card2">
+            <h2 style="text-align: center;">Badminton Players</h2>
+            <tr>
+                <td style="background-color:rgb(168, 249, 222)"><p>Name</p></td>
+                <td style="background-color:rgb(168, 249, 222)"><p>Roll Number</p></td>
+            </tr>
+        
+        {% for player in AllPlayers %}
+        <tr>
+        <td><p>{{player.name}}</p></td>
+        <td><p>{{player.roll}}</p></td>
+        </tr>
+        {% endfor %}
+        <br>           
+        
+        </table>
+        </center>
+</body>
+</html>

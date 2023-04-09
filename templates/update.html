@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Doc !</title>
+
+</head>
+<body>
+    <h2>Edit Player details</h2>
+    <center>
+    <table>
+        <form action = "/dashboard/edit/{{player.roll}}" method = "POST">
+        <tr>
+            <td style="border-radius: 15px 0px 0px 0px;">
+                <label for="todo" style="margin-right: 20px;">Player Name</label>
+            </td>
+            <td style="border-radius:0px 15px 0px 0px;">
+                <input type="text" id="todo" name="name" value="{{player.title}}">              
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="desc" style="margin-right: 20px;">Roll Number</label>
+            </td>
+            <td>
+                <input type="text" id="desc" name="roll" value="{{player.desc}}">              
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;border-radius: 0px 0px 15px 15px;">
+                <button type="submit">Change Task</button>
+            </td>
+
+        </tr>
+    </form>
+    </table>
+</center>
+</body>
+</html>

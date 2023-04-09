@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function disableBack() { window.history.forward(); }
+        setTimeout("disableBack()", 0);
+        window.onunload = function () { null };
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWolpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0px;
+        }
+        body{
+            background-image: linear-gradient(
+        rgba(44, 42, 42, 0.3), 
+      rgba(44, 42, 42, 0.3)
+    ),
+    /* your image */
+    url("https://i.ibb.co/SJfDCNY/bg3.jpg");
+        }
+        .header
+        {
+          filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+          background-color: white;
+          padding: 30px 60px;
+        }
+        .header a
+        {
+           float: right;
+           margin-top: -50px;
+           margin-right: 10px;
+           background-color: white;
+           border-radius: 10px;
+           padding: 10px 20px;
+           color: red;
+           border: 1px solid white;
+           text-decoration: none;
+           box-shadow: none;
+           font-weight: bold;
+           border: 2px solid red;
+           transition: 0.2s ease;
+        }
+        .header a:hover{
+            color: white;
+            background-color: red;
+        }
+        .btn:hover
+        {
+            background-color: rgb(160, 0, 0);
+        }
+        .whole
+        {
+            filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+            padding: 30px 60px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regolar', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: white;
+            height: auto;
+            overflow: auto;
+            margin: 29px 20px 10px 20px;
+            border-radius: 15px;
+        }
+        .card1
+        {
+            
+            filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+            width: 48%;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            height: 430px;
+            overflow: auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px 60px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        .card1 input{
+            padding: 10px 30px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .card2
+        {
+            filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+            width: 48%;
+            box-sizing: border-box;
+            display: inline-block;
+            
+            height: 430px;
+            overflow: auto;
+            background-color: white;
+           
+            border-radius: 15px;
+            padding: 30px 60px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        .box
+        {
+            margin: 15px;
+            
+        }
+        li {
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        li a{
+            margin-left: 120px;
+            font-size: 25px;
+        }   
+        li a i{
+            color: rgb(255, 98, 0);
+        }
+        li a i:hover{
+            color: red;
+        }
+        h1{
+            margin-left: 15px;
+        }
+        button{
+            border:none;
+            background-color: rgb(11, 199, 14);
+            transition: 0.3s ease;
+            font-weight: bold;
+            padding: 10px 30px;
+            color: white;
+        }
+        button:hover{
+            background-color: rgb(43, 177, 6);
+            color: white;
+            cursor: pointer;
+        }
+        .card2 a{
+            color: red;
+            display: block;
+            border: 1px solid red;
+            width: 20%;
+            margin-bottom: 30px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.2s ease;
+            font-weight: bold;
+        }
+        .card2 a:hover{
+            background-color: red;
+            color: white;
+        }
+        .card1 h2, .card2 h2{
+            background-color: rgb(158, 241, 244);
+            padding: 10px 0px;
+            margin-bottom: 15px;
+        }
+        .card2 h2{
+            background-color: rgb(234, 241, 102);
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+            {% if sport == "Football" %}
+            <h1>Football Dashboard</h1>
+            {% endif %}
+        {% if sport == "Cricket" %}
+            <h1>Cricket Dashboard</h1>
+            {% endif %}
+        {% if sport == "Kabaddi" %}   
+            <h1>Kabaddi Dashboard</h1>
+            {% endif %}
+        {% if sport == "Chess" %}   
+            <h1>Chess Dashboard</h1>
+            {% endif %}
+        {% if sport == "Table Tennis" %}   
+        <h1>Table Tennis Dashboard</h1>
+        {% endif %}
+        {% if sport == "Badminton" %}   
+            <h1>Badminton Dashboard</h1>
+        {% endif %}
+        {% if sport == "Volleyball" %}   
+            <h1>Volleyball Dashboard</h1>
+        {% endif %}
+        <a href="/logout">LOGOUT</a>
+    </div>
+    <div class="whole">    
+        <h1>Welcome {{current_user.name}}, Hope your {{current_user.sport}} team is doing well !</h1>
+    </div>        
+            <div class="card1">
+                <form method="post" action="#">
+                <h2>Add a player in your team</h2>
+                <input type="text" name="name"  placeholder="Player Name" autocomplete="off" required class="box"><br>
+                <input type="number" id="roll" name="roll" placeholder="Roll Number" autocomplete="off" required class="box"><br> 
+                <br><button type="submit" class="btn1" id="Submit">+ ADD PLAYER</button>
+            </form>
+            </div>
+            <div class="card2">
+                <h2 style="text-align: center;">Your Players</h2>
+                <ol>
+                    {% if sport == "Football" %}
+                        {% for player in AllFootball %}
+                        <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}
+                        </li>
+                                                     
+                        <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                            DELETE
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                    </ol>
+
+                <ol>
+                {% if sport == "Cricket" %}
+                    {% for player in AllCricket %}
+                        <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}</li>
+                                              
+                        <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                            DELETE
+                        </a>
+                    {% endfor %}
+                {% endif %}
+                    </ol>
+
+
+                <ol>
+                {% if sport == "Kabaddi" %}
+                    {% for player in AllKabaddi %}
+                        <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}</li>
+                                              
+                        <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                            DELETE
+                        </a>
+                    {% endfor %}
+                {% endif %}
+                </ol>
+
+<ol>
+            {% if sport == "Volleyball" %}
+                {% for player in AllVolleyball %}
+                    <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}</li>                 
+            <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                DELETE
+            </a>
+                {% endfor %}
+            {% endif %}
+</ol>
+
+<ol>
+        {% if sport == "Chess" %}
+            {% for player in AllChess %}
+                <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}</li>
+                            
+            <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                DELETE
+            </a>
+            {% endfor %}
+        {% endif %}
+</ol>
+
+<ol>
+    {% if sport == "Badminton" %}
+        {% for player in AllBadminton %}
+            <li>{{player.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{player.roll}}</li>
+            <a href="/dashboard/delete/{{player.roll}}" id="deleteBtn">
+                DELETE
+            </a>
+        {% endfor %}
+    {% endif %}
+<br>           
+                </ol>
+            </div>
+        </div>
+    
+</body>
+
+</html>
