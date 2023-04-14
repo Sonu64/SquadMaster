@@ -3,7 +3,7 @@
 
 SQUADMASTER is a Sports Database Management System that aims to solve the problem of inadequate documentation and record-keeping in schools and colleges when it comes to sports. The system allows the administration and coordinators to collect, store, and manage data related to students who are actively participating in sports and have the potential to represent the college in competitions across the country. Frequently, the dedication of collegiate athletes striving to elevate the reputation of their institution on a national level goes unnoticed or undervalued due to their anonymity amongst the broader population and even within their own administration.
 
-To address the issue, the team "INTERNAL SERVER ERROR" developed a web app that is user-friendly and accessible, with two different sections: one for the general public and the other for coordinators.
+To address the issue, the team "pip install life" developed a web app that is user-friendly and accessible, with two different sections: one for the general public and the other for coordinators.
 
 For the general public, the homepage has a "View all players" section, where they can view all the players who are actively representing or have the potential to represent the college in the near future. 
 
@@ -13,4 +13,4 @@ The use of SQUADMASTER ensures that the administration and coordinators have the
 
 The web app is developed by a team of four members named Sourakanti Mandal, Shobhit Srivastava, Shashikant Pandey, and Nilesh Kumar. Nilesh Kumar and Shashikant Pandey handled the frontend development using HTML and CSS, while Sourakanti Mandal and Shobhit Srivastava worked on the backend using Python, Flask, SQLite, and a little bit of Javascript. The team's collective effort went into idea generation, design, layout, planning, hosting, scripting, and video recording of the project. 
 
-SQUADMASTER is an innovative solution to the problem of inadequate documentation and record-keeping for sports activities in schools and colleges. With this system, the administration and coordinators can manage data with ease, ensuring accurate and up-to-date records of players. The web app's development by the team "INTERNAL SERVER ERROR" using the latest technology ensures its accessibility and user-friendliness.
+SQUADMASTER is an innovative solution to the problem of inadequate documentation and record-keeping for sports activities in schools and colleges. With this system, the administration and coordinators can manage data with ease, ensuring accurate and up-to-date records of players. The web app's development by the team "pip install life" using the latest technology ensures its accessibility and user-friendliness.
